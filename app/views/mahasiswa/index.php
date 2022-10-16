@@ -5,7 +5,10 @@
             <h3>Daftar Mahasiswa</h3>
             <ul class="list-group">
                 <?php foreach($data['mhs'] as $mhs) : ?>
-                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <?= $mhs['nama']; ?>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary">Detail</a>
+                    </li>
                 <?php endforeach; ?>
             </ul>
             

@@ -12,7 +12,7 @@ class Database {
     public function __construct()
     {
         // DSN: Data Source Name
-        $dsn = 'mysql:host=' . $this->host . ';dbname=phpmvc' . $this->db_name;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
 
         $option = [
             PDO::ATTR_PERSISTENT => true,
@@ -45,7 +45,7 @@ class Database {
                     $type = PDO::PARAM_NULL;
                     break;
                 default :
-                $type = PDO::PARAM_STR;
+                    $type = PDO::PARAM_STR;
             }
         }
 
